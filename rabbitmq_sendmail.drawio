@@ -1,0 +1,137 @@
+<mxfile host="app.diagrams.net" modified="2024-05-21T12:28:40.998Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="-yVw5wy1prM09f1IMlHw" version="24.4.4" type="device">
+  <diagram name="Trang-1" id="M5fm9jCxS0D3oeh2qvHK">
+    <mxGraphModel dx="2501" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-2" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-31" y="10" width="890" height="890" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-3" value="Nhập và yêu cầu gửi&lt;div&gt;sử dụng endpoint create&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="180" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-4" value="PostgreSQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="330" y="350" width="100" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-5" value="Người dùng" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="70" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-6" value="Lưu trữ email" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="375" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-7" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="435" as="sourcePoint" />
+            <mxPoint x="330" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-5" target="WIAOFN12MGOMrYzLrqLJ-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="110" as="sourcePoint" />
+            <mxPoint x="200" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-9" value="Đưa email vào hàng đợi RabbitMQ" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="495" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-6" target="WIAOFN12MGOMrYzLrqLJ-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="525" as="sourcePoint" />
+            <mxPoint x="430" y="475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-11" value="Service 1: Email_Manager" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="270" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-3" target="WIAOFN12MGOMrYzLrqLJ-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="430" as="sourcePoint" />
+            <mxPoint x="430" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-11" target="WIAOFN12MGOMrYzLrqLJ-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="430" as="sourcePoint" />
+            <mxPoint x="430" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-15" target="WIAOFN12MGOMrYzLrqLJ-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-15" value="Service 2: Email_Sender" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="270" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-17" target="WIAOFN12MGOMrYzLrqLJ-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-17" value="Hứng email từ hàng đợi RabbitMQ" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="375" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-18" value="Xử lý và dưa tới Resend" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="480" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-21" target="WIAOFN12MGOMrYzLrqLJ-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-21" target="WIAOFN12MGOMrYzLrqLJ-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-21" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="572.5" y="584.5" width="135" height="65.5" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-22" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-18" target="WIAOFN12MGOMrYzLrqLJ-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="580" as="sourcePoint" />
+            <mxPoint x="430" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-24" target="WIAOFN12MGOMrYzLrqLJ-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-24" value="Cập nhật status : &quot;Thành công&quot;&lt;br&gt;Bằng cách sử dụng endpoint update" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="700" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-25" value="Đúng" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="660" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-26" value="Cập nhật status : &quot;Thất bại&quot;&lt;br&gt;Bằng cách sử dụng endpoint update" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="587.25" width="150" height="92.75" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-27" value="Sai" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="585" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-28" value="Kết thúc" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="800" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-30" target="WIAOFN12MGOMrYzLrqLJ-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-30" value="Email được gửi thành công&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="810" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-31" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.31;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-24" target="WIAOFN12MGOMrYzLrqLJ-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="630" as="sourcePoint" />
+            <mxPoint x="430" y="580" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="360" y="730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.63;entryY=1.027;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="WIAOFN12MGOMrYzLrqLJ-26" target="WIAOFN12MGOMrYzLrqLJ-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="630" as="sourcePoint" />
+            <mxPoint x="430" y="580" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="455" y="520" />
+              <mxPoint x="393" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WIAOFN12MGOMrYzLrqLJ-33" value="&lt;span style=&quot;font-size: 36px;&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;SƠ ĐỒ LUỒNG&lt;/font&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="199" y="20" width="430" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
