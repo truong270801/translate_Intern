@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer {
+            background-color: #0064BA;
+            color: #ffff;
+            width: 100vw;
+            height: 30vh;
+            padding: 0 147px;
+        }
+
+        .ladi-container {
+            width: 1200px;
+            align-items: center;
+            padding: 16px;
+            line-height: 1.4;
+            font-family: sans-serif;
+        }
+
+        #LOGO {
+            width: 50px;
+            height: 50px;
+            background-image: url("https://w.ladicdn.com/s400x400/5cff118624dbba3522f3cf7a/logo-trang-01-20230104031601-ois0c.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            float: left;
+        }
+
+        .ladi-headl {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .ladi-line {
+            border-left: 3px solid rgb(255, 255, 255);
+            height: 50px;
+            padding: 0 8px;
+            float: left;
+        }
+
+        .ladi-list-contact {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            line-height: 1.6;
+            padding: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            padding-bottom: 16px;
+        }
+
+        .ladi-list-contact {
+            width: 35%;
+        }
+
+        .fa-solid {
+            margin-right: 8px;
+        }
+
+        .inline-item {
+            display: inline-block;
+            margin-right: 50px;
+        }
+
+        .ladi-content {
+
+            height: 70vh;
+            width: 1200px;
+            padding: 0 147px;
+        }
+
+        .back-page {
+            font-size: 20px;
+            color: #38BCFE;
+            padding: 30px 0;
+        }
+
+        .video-stream {
+            width: 783px;
+            height: 456px;
+            z-index: 1;
+            position: relative;
+
+        }
+
+        #video {
+            width: 100%;
+            height: 100%;
+            /* padding: 24px 20px; */
+        }
+
+        .live-stream {
+            display: flex;
+        }
+
+        .chat {
+            width: 300px;
+
+        }
+
+        .title-chat {
+            height: 58px;
+            background-color: #F1F3F4;
+            font-size: 18px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        .title-chat p {
+            padding: 16px;
+        }
+
+        .live-content {
+            margin-top: 16px;
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        .live-content h2 {
+            color: #38B6FF;
+            margin-bottom: 16px;
+        }
+
+        .content-chat {
+            height: 380px;
+            background-color: #1F2E34;
+        }
+
+        #error-image {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+
+        #error-image {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ladi-content">
+        <div class="back-page">
+            <i class="fa-solid fa-arrow-left"></i>
+            <b>Quay lại</b>
+        </div>
+
+        <div class="live-stream">
+
+            <div class="video-stream">
+                <div id="video">
+                    <video id="my-video" class="video-js vjs-fill" controls="" preload="auto" muted="muted"
+                        autoplay="autoplay" poster="" data-setup="{&quot;autoplay&quot;:&quot;any&quot;}">
+
+                        <source src="https://evg-stream.hocmai.net/live/254a1e5bd6faca94472994a5109bcbcb88f/playlist.m3u8" type="application/x-mpegURL">
+
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                    </video>
+                </div>
+                <img id="error-image"
+                    src="https://cellphones.com.vn/sforum/_next/image?url=https%3A%2F%2Fcdn-media.sforum.vn%2Fstorage%2Fapp%2Fmedia%2Fwp-content%2Fuploads%2F2021%2F08%2Fyoutube-not-working.jpg&w=3840&q=75"
+                    alt="Error Image">
+            </div>
+            <div class="chat">
+                <div class="title-chat">
+                    <p>Live chat</p>
+                </div>
+                <div class="content-chat"></div>
+            </div>
+        </div>
+
+        <div class="live-content">
+            <h2>ỨNG DỤNG ĐẠO HÀM ĐỂ KHẢO SÁT VÀ VẼ ĐỒ THỊ CỦA HÀM SỐ</h2>
+            <b>Tính đơn điệu của hàm số (P2)</b>
+
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="ladi-container">
+            <div id="LOGO"></div>
+            <div class="ladi-line"></div>
+            <h3 class="ladi-headl">HOCMAI - Nền tảng học trực tuyến số 1 Việt Nam<br>Đồng hành
+                cùng hàng nghìn HS chinh phục trường TOP mỗi năm<br></h3>
+            <div class="ladi-list-contact">
+                <ul>
+                    <li class="inline-item"><i class="fa-solid fa-phone"></i> 1900 6933</li>
+                    <li class="inline-item"><i class="fa-solid fa-envelope"></i> hotro@hocmai.vn&nbsp;</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Văn phòng Hà Nội: Tòa nhà 25T2 Nguyễn Thị Thập, Trung
+                        Hòa, Cầu Giấy, Hà Nội</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Trụ sở Hồ Chí Minh: Tòa nhà Galleria Metro 6 - 59 Xa Lộ
+                        Hà Nội, Phường Thảo Điền, Quận 2 TP.
+                        Hồ Chí Minh</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://vjs.zencdn.net/8.10.0/video.js"></script>
+<script>
+    const errorImage = document.getElementById('error-image');
+    const videoContainer = document.getElementById('video')
+
+    // Hàm tải lại video khi có lỗi xảy ra
+    function reloadVideo() {
+
+            const oldVideo = document.getElementById('my-video');
+            const newVideo = document.createElement('video');
+
+            newVideo.id = 'my-video';
+            newVideo.className = 'video-js vjs-fill';
+            newVideo.controls = true;
+            newVideo.preload = 'auto';
+            newVideo.muted = 'muted';
+            newVideo.autoplay = 'autoplay';
+            newVideo.poster = '';
+            newVideo.setAttribute('data-setup', '{"autoplay":"any"}');
+
+            const newSource = document.createElement('source');
+            newSource.src = 'https://evg-stream.hocmai.net/live/254a1e5bd6faca94472994a5109bcbcb88f/playlist.m3u8';
+            newSource.type = 'application/x-mpegURL';
+
+            newVideo.appendChild(newSource);
+            newVideo.innerHTML += `
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            `;
+
+            videoContainer.removeChild(oldVideo);
+            videoContainer.appendChild(newVideo);
+
+            initializeVideo(newVideo);
+    }
+
+    // Xử lý sự kiện lỗi của video
+    function initializeVideo(video) {
+
+        video.onerror = function (event) {
+            // event.preventDefault();
+            // const originalConsoleError = console.error;
+            // console.error = function() {};
+
+             console.log('Lỗi video, sẽ thử lại sau 10 giây...');
+            setTimeout(function() {
+                console.error = originalConsoleError;
+                reloadVideo();
+            }, 5000);
+
+            videoContainer.style.display = 'none';
+            errorImage.style.display = 'none'
+        };
+
+        video.oncanplay = function () {
+            console.log('Video đã load thành công');
+            videoContainer.style.display = 'block';
+            errorImage.style.display = 'none'
+        };
+    
+        videojs(video);
+    }
+
+    const video = document.getElementById('my-video');
+    initializeVideo(video)
+</script>
+
+</html>
